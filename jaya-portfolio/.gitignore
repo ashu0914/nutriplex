@@ -1,0 +1,25 @@
+# Secrets
+.env
+.env.local
+.env.production
+secrets.js
+config.private.js
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Logs
+*.log
+
+# Dependencies
+node_modules/
+
+# Build
+dist/
+build/

@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Jaya Yadav — Clinical Dietitian & Nutritionist</title>
+  <meta name="description" content="Jaya Yadav is a certified clinical dietitian helping you build a healthier relationship with food through practical, sustainable, and evidence-based nutrition guidance.">
+  <meta name="keywords" content="dietitian, nutritionist, clinical nutrition, diet planning, Jaya Yadav, wellness, health">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- reCAPTCHA v3 - ENABLE AFTER DOMAIN DEPLOYMENT-->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LeMPkwtAAAAADUHQbfXplPJFFWXVe-ikKdUD8kg"></script>
+  
+
+  <link rel="stylesheet" href="style.css">
+<base target="_blank">
+<base target="_blank">
+</head>
+
+<body>
+  <!-- ===================== PRELOADER ===================== -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-leaf">🌿</div>
+      <p class="preloader-text">Jaya Yadav</p>
+    </div>
+  </div>
+
+  <!-- ===================== CUSTOM CURSOR ===================== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-leaf">🌿</span>
+        <span class="logo-text">Nutriplex</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#services" class="nav-link" data-section="services">Services</a></li>
+        <li><a href="#programs" class="nav-link" data-section="programs">Programs</a></li>
+        <li><a href="#blog" class="nav-link" data-section="blog">Blog</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Book Consultation</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <section id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-particles" id="heroParticles"></div>
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge reveal" data-delay="0">
+          <span class="badge-dot"></span>
+          Clinical Dietitian & Nutritionist
+        </div>
+        <h1 class="hero-title">
+          <span class="title-line reveal" data-delay="100">Hi, I'm <em>Dt.Jaya</em></span>
+          <span class="title-line reveal" data-delay="200">Where Science Meet Nutrition,</span>
+        </h1>
+        <p class="hero-subtitle reveal" data-delay="400">
+          Helping you build a healthier relationship with food through practical, sustainable, and evidence-based nutrition guidance.
+        </p>
+        <div class="hero-buttons reveal" data-delay="500">
+          <a href="#contact" class="btn btn-primary">
+            <span>Book a Consultation</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#services" class="btn btn-outline">
+            <span>Explore Services</span>
+          </a>
+        </div>
+        <div class="hero-stats reveal" data-delay="600">
+          <div class="stat">
+            <span class="stat-number" data-target="800">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Clients Helped</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number" data-target="600">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Client Handling</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number" data-target="92">0</span><span class="stat-plus">%</span>
+            <span class="stat-label">Client Results</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual reveal" data-delay="200">
+        <div class="hero-image-wrapper">
+          <div class="hero-photo">
+            <img src="assets/jaya1.jpg" alt="Jaya Yadav - Clinical Dietitian">
+          </div>
+          <div class="hero-floating-card card-top">
+            <i class="fas fa-seedling"></i>
+            <span>Certified CDE</span>
+          </div>
+          <div class="hero-floating-card card-bottom">
+            <i class="fas fa-heart-pulse"></i>
+            <span>TATA Hospital Trained</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll to explore</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT SECTION ===================== -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <div class="about-img-wrapper">
+            <div class="about-photo">
+              <img src="assets/jaya2.jpg" alt="Jaya Yadav">
+            </div>
+            <div class="about-exp-badge">
+              <span class="exp-number">B.Sc</span>
+              <span class="exp-text">Clinical Nutrition<br>& Dietetics</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-content">
+          <span class="section-tag reveal">About Me</span>
+          <h2 class="section-title reveal">A Passionate Approach to <em>Nutrition & Wellness</em></h2>
+          <p class="about-text reveal">
+            I'm Jaya Yadav — a passionate and motivated Clinical Dietitian with a strong foundation in Nutrition and Dietetics from Vinoba Bhave University, Hazaribagh. I believe in the power of food to heal, support well-being, and make everyday life better.
+          </p>
+          <p class="about-text reveal">
+            During my clinical internship at TATA Main Hospital, West Bokaro, I gained invaluable hands-on experience in nutritional assessment, therapeutic diet planning, OPD counseling across specialties like Endocrinology, Nephrology, Cardiology, and Oncology, and daily care of critically ill patients. Now, as a Consultant Dietitian at Fitelo, I channel that experience into personalized, sustainable nutrition plans for every client.
+          </p>
+          <div class="about-philosophy reveal">
+            <div class="philosophy-icon">🌱</div>
+            <div>
+              <h4>My Philosophy</h4>
+              <p>I don't believe in fad diets or quick fixes. My approach centers on understanding your unique body, lifestyle, and goals — then crafting a plan that works for <em>your</em> life, not against it.</p>
+            </div>
+          </div>
+          <div class="about-certifications reveal">
+            <div class="cert-item">
+              <i class="fas fa-award"></i>
+              <span>Certified Diabetes Educator</span>
+            </div>
+            <div class="cert-item">
+              <i class="fas fa-certificate"></i>
+              <span>Applied Nutrition Coach (INHC)</span>
+            </div>
+            <div class="cert-item">
+              <i class="fas fa-medal"></i>
+              <span>Oncology Nutrition Certified</span>
+            </div>
+            <div class="cert-item">
+              <i class="fas fa-shield-halved"></i>
+              <span>Food Safety & Hygiene Certified</span>
+            </div>
+             <div class="cert-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>MSc Nutrition</span>
+            </div>
+             <div class="cert-item">
+              <i class="fas fa-user-doctor"></i>
+              <span>Dietetics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES SECTION ===================== -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal">Services</span>
+        <h2 class="section-title reveal">How I Can Help You Feel <em>Your Best</em></h2>
+        <p class="section-subtitle reveal">Personalized nutrition solutions designed around your unique health needs, goals, and lifestyle.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal" data-delay="0">
+          <div class="service-icon"><i class="fas fa-weight-scale"></i></div>
+          <h3>Weight Management</h3>
+          <p>Sustainable, evidence-based strategies for healthy weight loss or gain — no crash diets, no guilt, just results that last.</p>
+          <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal" data-delay="100">
+          <div class="service-icon"><i class="fas fa-venus"></i></div>
+          <h3>PCOS Nutrition</h3>
+          <p>Targeted dietary support for managing PCOS symptoms, balancing hormones, and improving metabolic health naturally.</p>
+          <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal" data-delay="200">
+          <div class="service-icon"><i class="fas fa-bacterium"></i></div>
+          <h3>Gut Health Guidance</h3>
+          <p>Restore digestive comfort with nutrition plans that support a healthy microbiome and address bloating, IBS, and more.</p>
+          <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal" data-delay="300">
+          <div class="service-icon"><i class="fas fa-droplet"></i></div>
+          <h3>Diabetes Meal Planning</h3>
+          <p>Smart, blood-sugar-friendly meal plans tailored to help you manage Type 1, Type 2, or gestational diabetes with confidence.</p>
+          <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal" data-delay="400">
+          <div class="service-icon"><i class="fas fa-utensils"></i></div>
+          <h3>Personalized Diet Plans</h3>
+          <p>Custom meal plans designed around your food preferences, medical conditions, lifestyle, and cultural background.</p>
+          <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal" data-delay="500">
+          <div class="service-icon"><i class="fas fa-spa"></i></div>
+          <h3>Lifestyle & Habit Coaching</h3>
+          <p>Beyond just food — build sustainable habits around sleep, hydration, mindful eating, and overall wellness.</p>
+          <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="service-card reveal service-card-last" data-delay="600">
+          <div class="service-icon"><i class="fas fa-heart-pulse"></i></div>
+          <h3>Medical Nutrition Therapy</h3>
+          <p>Specialized dietary support for managing chronic conditions and optimizing health through targeted nutrition strategies.</p>
+          <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== APPROACH SECTION ===================== -->
+  <section id="approach">
+    <div class="container">
+      <div class="approach-grid">
+        <div class="approach-content">
+          <span class="section-tag reveal">My Approach</span>
+          <h2 class="section-title reveal">Why Work With <em>Jaya?</em></h2>
+          <p class="section-subtitle reveal" style="text-align:left;">Every body is different. I take the time to understand yours — your health history, your goals, your lifestyle — and create a plan that feels achievable, not overwhelming.</p>
+        </div>
+        <div class="approach-items">
+          <div class="approach-item reveal" data-delay="0">
+            <div class="approach-number">01</div>
+            <div>
+              <h4>Evidence-Based Guidance</h4>
+              <p>Every recommendation is rooted in current nutritional science and clinical experience — never trends or gimmicks.</p>
+            </div>
+          </div>
+          <div class="approach-item reveal" data-delay="100">
+            <div class="approach-number">02</div>
+            <div>
+              <h4>Practical Meal Planning</h4>
+              <p>Plans that work with your schedule, budget, and food preferences. Real meals for real life — nothing impractical.</p>
+            </div>
+          </div>
+          <div class="approach-item reveal" data-delay="200">
+            <div class="approach-number">03</div>
+            <div>
+              <h4>Personalized Support</h4>
+              <p>No cookie-cutter diets. Your plan is built around your unique body, health conditions, and personal goals.</p>
+            </div>
+          </div>
+          <div class="approach-item reveal" data-delay="300">
+            <div class="approach-number">04</div>
+            <div>
+              <h4>Sustainable Habits</h4>
+              <p>I help you build habits that last a lifetime — not quick fixes that fade after a few weeks.</p>
+            </div>
+          </div>
+          <div class="approach-item reveal" data-delay="400">
+            <div class="approach-number">05</div>
+            <div>
+              <h4>Non-Judgmental Space</h4>
+              <p>Nutrition is deeply personal. I provide a compassionate, shame-free environment where you can grow at your own pace.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS SECTION ===================== -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal">Testimonials</span>
+        <h2 class="section-title reveal">What My Clients <em>Say</em></h2>
+        <p class="section-subtitle reveal">Real stories from real people who transformed their health through personalized nutrition.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal" data-delay="0">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Jaya completely changed my relationship with food. Her approach is so warm and practical — I never felt pressured or judged. I lost 8 kg in 3 months and actually enjoyed the process!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">P</div>
+            <div>
+              <h5>Priya Sharma</h5>
+              <span>Weight Management Client</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card featured reveal" data-delay="150">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Managing PCOS felt overwhelming until I started working with Jaya. She designed a meal plan that was easy to follow and actually delicious. My symptoms have improved so much — I feel like a new person."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">A</div>
+            <div>
+              <h5>Ananya Gupta</h5>
+              <span>PCOS Nutrition Client</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal" data-delay="300">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"As a diabetic, I struggled to know what to eat. Jaya made it simple. Her meal plans helped me stabilize my blood sugar and I feel more energetic than I have in years. Highly recommend!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">R</div>
+            <div>
+              <h5>Rajesh Kumar</h5>
+              <span>Diabetes Management Client</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal" data-delay="450">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Really grateful to my dietitian, Jaya Yadav, for helping me build a healthier lifestyle. With my busy schedule, i was never consistent with my diet or workouts and din't know what routine to follow Jaya made everything simple and manageable. she always made sure i ate on time,followed up regularly,and was always just one call away whenever i needed guidence or motivation. the best part is that i lost almost 10kgs while still eating properly and following a sunstainable routine. Truly lucky to have her as my ditetian. highly recommend Jaya to anyone looking for genuine and healthy results!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">T</div>
+            <div>
+              <h5>Tia Jha</h5>
+              <span>Thyroid Client</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal" data-delay="600">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"I joined  one month ago and started my weight reduction journey under the guidance of Dr. Jaya Incredible. Following her personalized diet plans and advice has truly helped me improve my eating habits, and I already feel more energetic and confident. She always listens patiently and suggests meals that match my preferences and are easy for me to cook. Her supportive approach makes the entire journey comfortable and motivating. Her guidance during cheat meals also keeps me mentally disciplined about avoiding fried and sugary foods. One of her words that always stays with me is: "Eat sensibly. Thank you, Dr. Jaya, for your continuous motivation, care, and support throughout my journey"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">T</div>
+            <div>
+              <h5>Vikram Pratap Singh</h5>
+              <span>Fatty Liver Client</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal" data-delay="750">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"I was facing uric acid issues and needed proper guidance for my diet. Consulting Jaya Dietitian was a really good decision for me. She explained everything clearly and gave me a practical diet plan according to my routine. She also guided me well on what foods to avoid and what to include for better uric acid management. Her advice was simple, easy to follow, and not overly restrictive. After following her guidance, I started feeling better and more confident about my eating habits. She is very supportive, understanding, and genuinely helpful throughout the process. I would definitely recommend Jaya Dietitian to anyone dealing with uric acid or looking for a healthier lifestyle."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">T</div>
+            <div>
+              <h5>Atul Sharma</h5>
+              <span>Uric Acid Client</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROGRAMS SECTION ===================== -->
+  <section id="programs">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal">Programs</span>
+        <h2 class="section-title reveal">Featured Nutrition <em>Programs</em></h2>
+        <p class="section-subtitle reveal">Structured programs designed to help you achieve lasting results at your own pace.</p>
+      </div>
+      <div class="programs-grid">
+        <div class="program-card reveal" data-delay="0">
+          <div class="program-badge">Popular</div>
+          <div class="program-icon"><i class="fas fa-user"></i></div>
+          <h3>1:1 Consultation</h3>
+          <p class="program-desc">A focused, one-on-one session to assess your nutritional needs, discuss your health goals, and create a personalized action plan.</p>
+          <ul class="program-features">
+            <li><i class="fas fa-check"></i> 45-minute deep-dive session</li>
+            <li><i class="fas fa-check"></i> Personalized diet assessment</li>
+            <li><i class="fas fa-check"></i> Custom meal plan included</li>
+            <li><i class="fas fa-check"></i> 7-day follow-up support</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-full">Get Started</a>
+        </div>
+        <div class="program-card featured reveal" data-delay="150">
+          <div class="program-badge">Best Value</div>
+          <div class="program-icon"><i class="fas fa-rotate"></i></div>
+          <h3>4-Week Reset</h3>
+          <p class="program-desc">A transformative 4-week program to reset your eating habits, boost energy, and build a sustainable nutrition foundation.</p>
+          <ul class="program-features">
+            <li><i class="fas fa-check"></i> Weekly consultation calls</li>
+            <li><i class="fas fa-check"></i> Customized weekly meal plans</li>
+            <li><i class="fas fa-check"></i> Daily WhatsApp support</li>
+            <li><i class="fas fa-check"></i> Progress tracking & adjustments</li>
+            <li><i class="fas fa-check"></i> Grocery lists & recipes</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-full">Get Started</a>
+        </div>
+        <div class="program-card reveal" data-delay="300">
+          <div class="program-badge">Premium</div>
+          <div class="program-icon"><i class="fas fa-calendar-check"></i></div>
+          <h3>Monthly Coaching</h3>
+          <p class="program-desc">Ongoing monthly nutrition coaching for sustained results, accountability, and long-term lifestyle transformation.</p>
+          <ul class="program-features">
+            <li><i class="fas fa-check"></i> Bi-weekly consultation calls</li>
+            <li><i class="fas fa-check"></i> Evolving meal plans</li>
+            <li><i class="fas fa-check"></i> Unlimited chat support</li>
+            <li><i class="fas fa-check"></i> Monthly progress reports</li>
+            <li><i class="fas fa-check"></i> Habit coaching included</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-full">Get Started</a>
+        </div>
+        <div class="program-card featured reveal program-card-last" data-delay="450">
+          <div class="program-badge">Hot Deal</div>
+          <div class="program-icon"><i class="fas fa-seedling"></i></div>
+          <h3>15-days Reset</h3>
+          <p class="program-desc">A transformative 15-day program to reset your eating habits, boost energy, and build a sustainable nutrition foundation.</p>
+          <ul class="program-features">
+            <li><i class="fas fa-check"></i> daly consultation calls</li>
+            <li><i class="fas fa-check"></i> Customized 15days meal plans</li>
+            <li><i class="fas fa-check"></i> Daily WhatsApp support</li>
+            <li><i class="fas fa-check"></i> Progress tracking & adjustments</li>
+            <li><i class="fas fa-check"></i> Grocery lists & recipes</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-full">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BLOG SECTION ===================== -->
+  <section id="blog">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag reveal">Resources</span>
+        <h2 class="section-title reveal">Nutrition Tips & <em>Insights</em></h2>
+        <p class="section-subtitle reveal">Explore helpful articles on nutrition, wellness, and building healthier habits.</p>
+      </div>
+      <div class="blog-grid">
+        <div class="blog-card reveal" data-delay="0">
+          <div class="blog-image">
+            <img src="assets/healthy_bowl.webp" alt="Healthy bowl with colorful vegetables and grains">
+            <span class="blog-tag">Nutrition</span>
+          </div>
+          <div class="blog-content">
+            <span class="blog-date"><i class="far fa-calendar"></i> June 15, 2026</span>
+            <h4>5 Simple Ways to Make Your Meals More Nutrient-Dense</h4>
+            <p>Small changes to your everyday meals can make a big difference. Here are practical tips to boost the nutritional value of what you already eat.</p>
+            <a href="https://www.verywellhealth.com/easy-ways-to-boost-the-nutrition-of-your-food-11964552" target="_blank" rel="noopener noreferrer" class="blog-link">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="blog-card reveal" data-delay="150">
+          <div class="blog-image">
+            <img src="assets/nutrition_ingredients.webp" alt="Fresh spices and ingredients for healthy cooking">
+            <span class="blog-tag">Wellness</span>
+          </div>
+          <div class="blog-content">
+            <span class="blog-date"><i class="far fa-calendar"></i> May 28, 2026</span>
+            <h4>Understanding Anti-Inflammatory Foods & Why They Matter</h4>
+            <p>Chronic inflammation is linked to many health conditions. Discover which foods can help fight inflammation naturally and support your body's healing.</p>
+            <a href="https://www.alliedacademies.org/articles/antiinflammatory-diets-foods-that-fight-inflammation-and-why-it-matters.pdf" target="_blank" rel="noopener noreferrer" class="blog-link">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="blog-card reveal" data-delay="300">
+          <div class="blog-image">
+            <img src="assets/green_smoothie.webp" alt="Green smoothie with fresh fruits and vegetables">
+            <span class="blog-tag">Recipes</span>
+          </div>
+          <div class="blog-content">
+            <span class="blog-date"><i class="far fa-calendar"></i> May 10, 2026</span>
+            <h4>The Perfect Post-Workout Smoothie for Recovery & Energy</h4>
+            <p>What you eat after a workout matters. Learn how to build a smoothie that supports muscle recovery, refuels your energy, and tastes amazing.</p>
+            <a href="https://instacuppastore.com/blogs/main-page/post-workout-smoothie-protein-recovery-blends-2-minutes?srsltid=AfmBOorUtVStezHJbOG4NMoawGHvmQcVM1ByeaR_gm1QOVi1Ybb0lQlk" target="_blank" rel="noopener noreferrer" class="blog-link">Read Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ SECTION ===================== -->
+  <section id="faq">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-left">
+          <span class="section-tag reveal">FAQ</span>
+          <h2 class="section-title reveal">Common <em>Questions</em></h2>
+          <p class="reveal">Have more questions? Feel free to reach out — I'm always happy to help you understand how nutrition can work for you.</p>
+          <a href="#contact" class="btn btn-primary reveal">Ask a Question <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="faq-right">
+          <div class="faq-item reveal" data-delay="0">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do I need a doctor's referral to consult with you?</span>
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="faq-answer">
+              <p>No, you don't need a referral! Anyone looking to improve their nutrition and health can book a consultation directly. However, if you have a specific medical condition, I may coordinate with your doctor to provide the best possible care.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal" data-delay="100">
+            <button class="faq-question" aria-expanded="false">
+              <span>What happens during the first consultation?</span>
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="faq-answer">
+              <p>In our first session, I'll take a detailed health history, understand your dietary habits, lifestyle, food preferences, and goals. Based on this, I'll design a personalized nutrition plan that you can start implementing right away.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal" data-delay="200">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do you provide online consultations?</span>
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Absolutely! I offer both in-person and virtual consultations via video call. Online sessions are just as effective and allow us to work together no matter where you are in India or abroad.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal" data-delay="300">
+            <button class="faq-question" aria-expanded="false">
+              <span>Will you give me a strict diet I have to follow?</span>
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Not at all! I don't believe in overly restrictive diets. My plans are flexible, practical, and built around foods you enjoy. The goal is sustainable change — not deprivation. We'll work together to find what feels right for you.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal" data-delay="400">
+            <button class="faq-question" aria-expanded="false">
+              <span>How long before I see results?</span>
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Most clients start noticing improvements in energy, digestion, and overall well-being within 2–3 weeks. Visible changes like weight management and improved lab results typically show within 4–8 weeks, depending on your consistency and starting point.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal" data-delay="500">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can you help with medical conditions like diabetes, thyroid, or kidney disease?</span>
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! I have clinical training in therapeutic diet planning for conditions including diabetes, thyroid disorders, renal disease, cardiovascular issues, and oncology nutrition. My internship at TATA Main Hospital gave me hands-on experience managing complex cases alongside medical teams.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===================== CONTACT SECTION ===================== -->
+  <section id="contact">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag reveal">Get in Touch</span>
+      <h2 class="section-title reveal">Let's Start Your <em>Wellness Journey</em></h2>
+      <p class="section-subtitle reveal">Ready to take the first step? Book a consultation or send me a message — I'd love to hear from you.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-card">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h5>Email</h5>
+              <a href="mailto:nutriplex.co@gmail.com">nutriplex.co@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <h5>Phone</h5>
+              <a href="tel:+917991150472">+91 7991150472</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-location-dot"></i></div>
+            <div>
+              <h5>Location</h5>
+              <p>Ghazipur, Uttar Pradesh, India</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-social">
+          <h5>Connect with me</h5>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/company/nutriplex-co/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/nutriplex.co/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIMPLE FORMSPREE FORM - NO OTP -->
+      <form id="contactForm" action="https://formspree.io/f/xqevnloq" method="POST">
+        <!-- Honeypot field - bots trap -->
+        <div class="honeypot" aria-hidden="true" style="position:absolute;left:-5000px;">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+        </div>
+
+        <!-- reCAPTCHA token -->
+        <input type="hidden" id="recaptchaToken" name="g-recaptcha-response">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required minlength="2">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
+          </div>
+          <div class="form-group">
+            <label for="service">Service Interested In</label>
+            <select id="service" name="service">
+              <option value="" disabled selected>Select a service</option>
+              <option value="weight">Weight Management</option>
+              <option value="pcos">PCOS Nutrition</option>
+              <option value="gut">Gut Health</option>
+              <option value="diabetes">Diabetes Meal Planning</option>
+              <option value="custom">Personalized Diet Plan</option>
+              <option value="coaching">Lifestyle Coaching</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your health goals or any questions you have..." maxlength="1000"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+          <span>Send Message</span>
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="footer-logo">
+            <span class="logo-leaf">🌿</span>
+            <span class="logo-text">Jaya Yadav</span>
+          </a>
+          <p>Clinical Dietitian & Nutritionist helping you build a healthier, happier life through personalized nutrition guidance.</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/nutriplex-co/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/nutriplex.co/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="#services">Weight Management</a></li>
+            <li><a href="#services">PCOS Nutrition</a></li>
+            <li><a href="#services">Gut Health</a></li>
+            <li><a href="#services">Diabetes Meal Plans</a></li>
+            <li><a href="#services">Diet Consultations</a></li>
+            <li><a href="#services">Lifestyle Coaching</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="mailto:nutriplex.co@gmail.com">nutriplex.co@gmail.com</a></li>
+            <li><a href="tel:+917991150472">+91 7991150472</a></li>
+            <li>Ghazipur, Uttar Pradesh</li>
+            <li>India</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Jaya Yadav. All rights reserved.</p>
+        <p>Designed with <i class="fas fa-heart" style="color: var(--blush);"></i> for better nutrition</p>
+      </div>
+    </div>
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>

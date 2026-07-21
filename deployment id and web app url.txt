@@ -1,0 +1,40 @@
+AKfycbzPhtPTbvZczcGcx538xBSGo8yHgEBOnV13xfyDTQOE1HJFE5CmUqLgWl4fN86wGhPZ                        deployment id 
+
+
+
+web app url     https://script.google.com/macros/s/AKfycbzPhtPTbvZczcGcx538xBSGo8yHgEBOnV13xfyDTQOE1HJFE5CmUqLgWl4fN86wGhPZ/exec       
+
+
+formspree  https://formspree.io/f/xqevnloq
+
+
+re captcha settings :-
+
+site key = 6LcL20ctAAAAAMERmX2kMH80LyaspADCnTSL-U
+secrete key = 6LcL20ctAAAAAKaAphrDkBtKc7HzL2EI5_0kq982
+
+ email . js service id :-  service_p5k813g
+412Gmail_API: Request had insufficient authentication scopes.
+
+public key -Z4wWEWpGyDRzoSyX
+
+
+const initContactForm = () => {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    const originalHTML = btn.innerHTML;
+
+    btn.innerHTML = '<span>Message Sent!</span><i class="fas fa-check"></i>';
+    btn.style.background = '#344E41';
+
+    setTimeout(() => {
+      btn.innerHTML = originalHTML;
+      btn.style.background = '';
+      form.reset();
+    }, 3000);
+  });
+};
