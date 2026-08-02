@@ -500,7 +500,7 @@ const initContactForm = () => {
   const form = document.getElementById('contactForm');
   if (!form) return;
 
-  const RECAPTCHA_SITE_KEY = '6LeMPkwtAAAAADUHQbfXplPJFFWXVe-ikKdUD8kg';
+  const RECAPTCHA_SITE_KEY = '6LeGknEtAAAAAEIZ_2dHdXAHjnycVI9-fEUVV6rE';
 
   // Disposable email domains list
   const DISPOSABLE_DOMAINS = [
