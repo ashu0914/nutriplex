@@ -496,7 +496,7 @@ const initFAQ = () => {
 };
 
 // ─── CONTACT FORM (Formspree + reCAPTCHA) ─────────────────
-const initContactForm = () => {
+const initLegacyContactForm = () => {
   const form = document.getElementById('contactForm');
   if (!form) return;
 
@@ -658,6 +658,70 @@ const initContactForm = () => {
 };
 
 // ─── PARALLAX FLOATING ELEMENTS (Desktop Only) ──────────────
+// Secure contact form: reCAPTCHA is verified server-side before a one-time email code is issued.
+const initContactForm = () => {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+  const siteKey = '6LcL20ctAAAAAMERmX2kMH80LyaspADCnTSL-UZT';
+  const otpSection = document.getElementById('otpSection');
+  const otpInput = document.getElementById('otp');
+  const otpStatus = document.getElementById('otpStatus');
+  let verificationId = '';
+  let otpExpiresAt = 0;
+
+  const button = (text, icon, disabled) => {
+    const submit = document.getElementById('submitBtn');
+    submit.innerHTML = `<span>${text}</span><i class="fas ${icon}"></i>`;
+    submit.disabled = disabled;
+  };
+  const showError = (message) => {
+    button(message, 'fa-exclamation-circle', true);
+    setTimeout(() => button(verificationId ? 'Verify & Send Message' : 'Send Message', verificationId ? 'fa-shield-halved' : 'fa-paper-plane', false), 3000);
+  };
+  const formData = () => ({
+    name: form.name.value.trim(), email: form.email.value.trim(), phone: form.phone.value.trim(),
+    service: form.service.value, message: form.message.value.trim(),
+    _gotcha: form.querySelector('input[name="_gotcha"]')?.value || ''
+  });
+  const post = async (url, payload) => {
+    const response = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+    const result = await response.json();
+    if (!response.ok) throw new Error(result.error || 'Request failed. Please try again.');
+    return result;
+  };
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    try {
+      const values = formData();
+      if (!values.name || !values.email) throw new Error('Please enter your name and email address.');
+      if (!verificationId || Date.now() > otpExpiresAt) {
+        if (typeof grecaptcha === 'undefined') throw new Error('Security check is loading. Please try again.');
+        button('Sending code...', 'fa-spinner fa-spin', true);
+        const recaptchaToken = await grecaptcha.execute(siteKey, { action: 'request_otp' });
+        const result = await post('/api/request-otp', { email: values.email, _gotcha: values._gotcha, recaptchaToken });
+        verificationId = result.verificationId;
+        otpExpiresAt = Date.now() + 600000;
+        otpSection.hidden = false;
+        otpStatus.textContent = 'A 6-digit code was sent. It expires in 10 minutes.';
+        otpInput.focus();
+        button('Verify & Send Message', 'fa-shield-halved', false);
+        return;
+      }
+      if (!/^\d{6}$/.test(otpInput.value)) throw new Error('Please enter the 6-digit email code.');
+      button('Verifying...', 'fa-spinner fa-spin', true);
+      await post('/api/verify-and-submit', { ...values, verificationId, otp: otpInput.value });
+      form.reset();
+      verificationId = '';
+      otpSection.hidden = true;
+      button('Message Sent', 'fa-check', true);
+      setTimeout(() => button('Send Message', 'fa-paper-plane', false), 2500);
+    } catch (error) {
+      showError(error.message || 'Unable to send your message. Please try again.');
+    }
+  });
+};
+
 const initParallax = () => {
   if (isTouchDevice() || isMobile()) {
     console.log('Parallax disabled on touch/mobile devices');

@@ -1,0 +1,9 @@
+{
+  "name": "nutriplex",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nutriplex — Clinical Dietitian & Nutritionist portfolio by Jaya Yadav",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
