@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "description": "Nutriplex — Clinical Dietitian & Nutritionist portfolio by Jaya Yadav",
+  "dependencies": {
+    "nodemailer": "^6.9.0"
+  },
   "engines": {
     "node": ">=20.0.0"
   }

@@ -1,4 +1,5 @@
 const crypto = require('crypto');
+const nodemailer = require('nodemailer');
 
 // 200+ most common disposable/temporary email domains
 const DISPOSABLE_DOMAINS = new Set([
@@ -198,14 +199,24 @@ async function kv(path, method = 'GET') {
 }
 
 async function sendOtp(email, code) {
-  const from = process.env.RESEND_FROM_EMAIL;
-  if (!process.env.RESEND_API_KEY || !from) throw new Error('Email verification is not configured.');
-  const response = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ from, to: [email], subject: 'Your Nutriplex verification code', text: `Your Nutriplex verification code is ${code}. It expires in 10 minutes. Do not share this code.` })
+  const gmailUser = process.env.GMAIL_USER;
+  const gmailPass = process.env.GMAIL_APP_PASSWORD;
+  if (!gmailUser || !gmailPass) throw new Error('Email verification is not configured.');
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: { user: gmailUser, pass: gmailPass }
   });
-  if (!response.ok) throw new Error('We could not send the verification code.');
+  try {
+    await transporter.sendMail({
+      from: `"Nutriplex" <${gmailUser}>`,
+      to: email,
+      subject: 'Your Nutriplex verification code',
+      text: `Your Nutriplex verification code is ${code}. It expires in 10 minutes. Do not share this code.`,
+      html: `<div style="font-family:Arial,sans-serif;max-width:480px;margin:0 auto;padding:24px;border:1px solid #e0e0e0;border-radius:12px"><h2 style="color:#2d5016;margin:0 0 16px">Nutriplex Verification</h2><p style="font-size:16px;color:#333">Your verification code is:</p><div style="background:#f0f7e6;padding:16px;border-radius:8px;text-align:center;margin:16px 0"><span style="font-size:32px;font-weight:bold;letter-spacing:8px;color:#2d5016">${code}</span></div><p style="font-size:14px;color:#666">This code expires in 10 minutes. Do not share this code with anyone.</p><hr style="border:none;border-top:1px solid #e0e0e0;margin:20px 0"><p style="font-size:12px;color:#999">— Nutriplex by Dt. Jaya Yadav</p></div>`
+    });
+  } catch (err) {
+    throw new Error('We could not send the verification code.');
+  }
 }
 
 async function validatePhone(phone) {
